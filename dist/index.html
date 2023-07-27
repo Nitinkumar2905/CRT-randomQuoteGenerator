@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Generator - Get daily new life changing qoutes</title>
+    
+  <script type="module" crossorigin src="/assets/index-b1a17b50.js"></script>
+  <link rel="stylesheet" href="/assets/index-925ba8fc.css">
+</head>
+
+<body>
+    <nav class="flex bg-gray-100">
+        <div class="m-5 flex justify-around md:w-[100%]">
+            <span class="text-xl font-semibold">Quote Generator</span>
+            <div class="hidden md:flex md:space-x-5">
+                <li class="list-none">
+                    <a class="hover:bg-gray-400 hover:text-white duration-300 rounded-md px-4 py-2" href="#">Home</a>
+                </li>
+                <li class="list-none">
+                    <a class="hover:bg-gray-400 hover:text-white duration-300 rounded-md px-4 py-2" href="#">About</a>
+                </li>
+                <li class="list-none">
+                    <a class="hover:bg-gray-400 hover:text-white duration-300 rounded-md px-4 py-2"
+                        href="#">Download</a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mx-auto w-[100%] my-2 h-[80vh]">
+        <div class="w-[100%] flex flex-col my-12 items-center">
+            <div class="space-y-2 text-center mx-auto my-12" style="font-family: Arial, Helvetica, sans-serif;">
+                <span class="text-center text-2xl md:text-5xl font-semibold">
+                    Generate <span class="text-blue-500">Random</span> Quotes
+                </span>
+                <p class="md:w-[80%] w-fit mx-auto  text-center">Generate random quotes within various provided
+                    categories.</p>
+            </div>
+            <!-- main code -->
+            <div class="flex flex-col w-fit items-center space-y-12">
+                <!-- code to use input for quote -->
+                <div id="main" class="flex flex-col md:flex-row  space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="space-x-4 md:space-x-2">
+                        <span class="font-medium text-xl">Select Category</span>
+                        <select class="appearance-none  px-3 border py-2 border-black rounded-md" value="select"
+                            id="category">
+                            <option id="category" class="mx-4" value="select">select</option>
+                            <option id="category" class="mx-4" value="age">Age</option>
+                            <option id="category" class="mx-4" value="alone">Alone</option>
+                            <option id="category" class="mx-4" value="amazing">Amazing</option>
+                            <option id="category" class="mx-4" value="anger">Anger</option>
+                            <option id="category" class="mx-4" value="architecture">Architecture</option>
+                            <option id="category" class="mx-4" value="art">Art</option>
+                            <option id="category" class="mx-4" value="attitude">Attitude</option>
+                            <option id="category" class="mx-4" value="beauty">Beauty</option>
+                            <option id="category" class="mx-4" value="best">Best</option>
+                            <option id="category" class="mx-4" value="birthday">Birthday</option>
+                            <option id="category" class="mx-4" value="business">Business</option>
+                            <option id="category" class="mx-4" value="car">Car</option>
+                            <option id="category" class="mx-4" value="change">Change</option>
+                            <option id="category" class="mx-4" value="communications">Communications</option>
+                            <option id="category" class="mx-4" value="computers">Computers</option>
+                            <option id="category" class="mx-4" value="cool">Cool</option>
+                            <option id="category" class="mx-4" value="courage">Courage</option>
+                            <option id="category" class="mx-4" value="dad">Dad</option>
+                            <option id="category" class="mx-4" value="dating">Dating</option>
+                            <option id="category" class="mx-4" value="death">Death</option>
+                            <option id="category" class="mx-4" value="design">Design</option>
+                            <option id="category" class="mx-4" value="dreams">Dreams</option>
+                            <option id="category" class="mx-4" value="education">Education</option>
+                            <option id="category" class="mx-4" value="environmental">Environmental</option>
+                        </select>
+                    </div>
+
+                    <button  id="generate"
+                        class="shadow-sm mx-auto shadow-black hover:bg-blue-600 bg-blue-500 text-white rounded-md px-6 py-2"
+                        type="button">
+                        Generate
+                    </button>
+                </div>
+                <!-- code to show fetched quote -->
+                <div class="md:w-[80%] mx-5 md:mx-0 items-start">
+                    <div class="loading" style="display: none;">
+                        Loading...
+                    </div>
+                    <div id="output-item" class="md:w-[90vh] flex flex-col items-start">
+                        <span class="font-semibold text-lg text-blue-950">Generated Quote :</span>
+
+                        <div class="flex flex-col mt-3 space-y-[.125rem]">
+                            <span class="font-medium">Quote: </span>
+                            <div class="rounded flex flex-col md:flex-row items-start md:items-center">
+                                <p class="bg-gray-100 px-3 py-1 quote"></p>
+                                <button id="copy"
+                                    class="rounded-md bg-blue-500 hover:bg-blue-600 m-2 px-3 py-1 text-white shadow-sm shadow-black">
+                                    Copy
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col mt-3">
+                            <span class="font-medium">Author: </span>
+                            <span id="author"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
